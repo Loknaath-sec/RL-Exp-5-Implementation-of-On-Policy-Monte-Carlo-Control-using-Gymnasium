@@ -100,17 +100,13 @@ $$
 
 ## Algorithm
 
-```text
-
-1. **Initialize** the policy (\pi) and action-value function (Q(s,a)) arbitrarily.
-2. **Generate an episode** by following the current policy from the initial state until the terminal state.
-3. **Calculate the return (G_t)** for each state-action pair using the rewards obtained until the end of the episode.
-4. **Update (Q(s,a))** by averaging the observed returns for each state-action pair.
-5. **Evaluate the current policy** using the updated action-value estimates.
-6. **Improve the policy** by selecting the action with the highest (Q(s,a)) value for each state.
-7. **Repeat Steps 2–6** until the policy becomes stable or reaches the desired convergence.
-
-```
+1. Initialize the policy π and action-value function Q(s,a) arbitrarily.
+2. Generate an episode by following the current policy until the terminal state.
+3. Calculate the return G for each state-action pair using the obtained rewards.
+4. Update Q(s,a) by averaging the observed returns.
+5. Evaluate the current policy using the updated Q values.
+6. Improve the policy by selecting the action with the highest Q(s,a) value.
+7. Repeat Steps 2–6 until the policy becomes stable or converges.
 
 ## Python Program
 
