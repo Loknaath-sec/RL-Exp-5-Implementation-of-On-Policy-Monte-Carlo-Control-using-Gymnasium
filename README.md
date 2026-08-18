@@ -335,25 +335,49 @@ env.close()
 ---
 
 ## Output
+### Episodes=20000
 
-### Final Q-table:
+#### Final Q-table:
 <img width="376" height="357" alt="image" src="https://github.com/user-attachments/assets/d8304a86-3456-4bfd-9218-ebde1212689e" />
 
 
 
-### Estimated State-Value Function:
+#### Estimated State-Value Function:
 <img width="423" height="156" alt="image" src="https://github.com/user-attachments/assets/078dc8d4-5e44-4b29-bc3f-ab5bf7c7c1be" />
 
 
-### Learned Policy:
+#### Learned Policy:
 <img width="316" height="116" alt="image" src="https://github.com/user-attachments/assets/0a23c373-e722-4630-b374-a4d284525320" />
 
 
-### Average reward over last 1000 episodes: 
+#### Average reward over last 1000 episodes: 
 <img width="480" height="51" alt="image" src="https://github.com/user-attachments/assets/684249f0-4a9b-4fc1-9795-33b5d6373e95" />
 
-### Plot Learning Curve
+#### Plot Learning Curve:
 <img width="817" height="552" alt="image" src="https://github.com/user-attachments/assets/086fc822-7046-413e-ad70-96862fcc96d5" />
+
+
+
+### Episodes=5000
+
+#### Final Q-table:
+<img width="335" height="352" alt="image" src="https://github.com/user-attachments/assets/23eb9a08-31e6-4724-8863-f5d05870afeb" />
+
+
+#### Estimated State-Value Function:
+<img width="358" height="155" alt="image" src="https://github.com/user-attachments/assets/9b8f03ee-69ee-4daf-b6ff-8f409c7875f8" />
+
+
+#### Learned Policy:
+<img width="348" height="112" alt="image" src="https://github.com/user-attachments/assets/8ff2b9ed-ae83-4b17-9d09-e96606ecd7df" />
+
+
+#### Average reward over last 1000 episodes: 
+<img width="515" height="48" alt="image" src="https://github.com/user-attachments/assets/f0f08144-49c8-44c7-8e02-be314a5d1cfe" />
+
+
+#### Plot Learning Curve:
+<img width="831" height="561" alt="image" src="https://github.com/user-attachments/assets/c6799244-a29d-4ace-add6-8539292cb2d1" />
 
 
 ---
@@ -366,10 +390,13 @@ Monte Carlo methods successfully estimated the action values Q(s,a) and improved
 
 ## Inference
 ```text
-1. Monte Carlo methods successfully estimate action values Q(s,a) using returns from complete episodes.
-2. The on-policy method learns from actions selected by the current policy.
-3. Repeated policy evaluation and policy improvement gradually produce a better policy.
-4. The experiment shows that Generalized Policy Iteration can converge toward an optimal or near-optimal policy through repeated learning.
+1. The Monte Carlo method successfully improves the policy over 5,000 training episodes.
+2. The average reward increases steadily from around 0.05 to approximately 0.90.
+3. The increasing reward indicates that the agent gradually learns better actions through repeated episodes.
+4. The learning curve becomes more stable toward the later episodes, showing improved policy performance.
+5. Small fluctuations in the curve indicate continued exploration and variation in episode outcomes.
+6. The results demonstrate that more training episodes help Monte Carlo control achieve better action-value estimates.
+7. Overall, 5,000 episodes provide sufficient training to show clear learning and convergence toward a high-performing policy.
 
 ```
 
